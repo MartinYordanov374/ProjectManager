@@ -1,0 +1,22 @@
+@mixin formsDesign(){
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 2%;
+}
+.formContainer{
+
+    .formHolder{
+        margin-top: 10%;
+        .addProjectNameForm{
+            @include formsDesign()
+        }
+        .addProjectDeadlineForm{
+            @include formsDesign()
+    
+        }
+        .addProjectButton{
+            margin-right: 25%;
+            @include formsDesign()
+        }
+    }
+}

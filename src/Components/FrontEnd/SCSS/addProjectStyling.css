@@ -1,0 +1,23 @@
+.formContainer .formHolder {
+  margin-top: 10%;
+}
+
+.formContainer .formHolder .addProjectNameForm {
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 2%;
+}
+
+.formContainer .formHolder .addProjectDeadlineForm {
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 2%;
+}
+
+.formContainer .formHolder .addProjectButton {
+  margin-right: 25%;
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 2%;
+}
+/*# sourceMappingURL=addProjectStyling.css.map */

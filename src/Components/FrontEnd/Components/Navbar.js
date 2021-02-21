@@ -9,6 +9,11 @@ function NavbarComponent() {
                     ProjectManager
                 </NavbarBrand>
                 <Nav>
+                <Nav.Link href='/projects'>
+                        <Nav.Item className='navbarLink'>
+                           Projects
+                        </Nav.Item>
+                    </Nav.Link>
                     <Nav.Link href='/Add'>
                         <Nav.Item className='navbarLink'>
                             Add Project
