@@ -31,7 +31,7 @@
 }
 
 .projectsPageContainer .projectsListContainer .projectContainer .projectFinishedIcon:hover {
-  color: green;
+  color: lime;
 }
 
 body, html {
