@@ -1,0 +1,29 @@
+@mixin navbarLinkSpecifications(){
+    transition: linear 0.2s;
+    font-size: 15px;
+    font-weight: bold;
+}
+@mixin navbarLinkHover(){
+    color: green;
+    transition: linear 0.2s;
+    
+
+}
+.navbar{
+    background-color: black;
+    .navbarBrand{
+        color: white;
+        font-size: 20px;
+        font-weight: bolder;
+        &:hover{
+            color: white;
+        }
+    }
+    .navbarLink{
+        color: orange;
+        @include navbarLinkSpecifications();
+        &:hover{
+            @include navbarLinkHover()
+        }
+    }
+}

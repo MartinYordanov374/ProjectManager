@@ -1,0 +1,28 @@
+.navbar {
+  background-color: black;
+}
+
+.navbar .navbarBrand {
+  color: white;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.navbar .navbarBrand:hover {
+  color: white;
+}
+
+.navbar .navbarLink {
+  color: orange;
+  -webkit-transition: linear 0.2s;
+  transition: linear 0.2s;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.navbar .navbarLink:hover {
+  color: green;
+  -webkit-transition: linear 0.2s;
+  transition: linear 0.2s;
+}
+/*# sourceMappingURL=navbarStyling.css.map */

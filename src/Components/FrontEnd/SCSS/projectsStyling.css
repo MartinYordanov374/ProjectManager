@@ -1,0 +1,43 @@
+.projectsPageContainer .projectsListContainer {
+  color: white;
+}
+
+.projectsPageContainer .projectsListContainer .projectContainer {
+  border-style: solid;
+  width: 25%;
+  margin-left: 6%;
+  margin-top: 2%;
+  float: left;
+  background-color: rgba(0, 0, 255, 0.7);
+}
+
+.projectsPageContainer .projectsListContainer .projectContainer .projectIcon {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.projectsPageContainer .projectsListContainer .projectContainer .deleteProjectIcon {
+  margin-top: 1%;
+  float: right;
+  color: white;
+}
+
+.projectsPageContainer .projectsListContainer .projectContainer .deleteProjectIcon:hover {
+  color: red;
+}
+
+.projectsPageContainer .projectsListContainer .projectContainer .projectFinishedIcon {
+  float: left;
+}
+
+.projectsPageContainer .projectsListContainer .projectContainer .projectFinishedIcon:hover {
+  color: green;
+}
+
+body, html {
+  width: 100%;
+  height: 110vh;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(yellow), to(red));
+  background-image: linear-gradient(yellow, red);
+}
+/*# sourceMappingURL=projectsStyling.css.map */

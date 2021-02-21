@@ -1,0 +1,41 @@
+.projectsPageContainer{
+    .projectsListContainer{
+        color: white;
+        
+        .projectContainer{
+            border-style: solid;
+            width: 25%;
+            margin-left: 6%;
+            margin-top: 2%;    
+            float: left;
+            background-color: rgba(0,0,255,0.7);
+
+            .projectIcon{
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+            .deleteProjectIcon{
+                margin-top: 1%;
+                float: right;
+                color: white;
+                &:hover{
+                    color: red
+                }
+            }
+            .projectFinishedIcon{
+                float: left;
+                &:hover{
+                    color: green
+                }
+            }
+            .projectName{
+
+            }
+        }
+    }
+}
+body, html{
+    width: 100%;
+    height: 110vh;
+    background-image: linear-gradient(yellow, red );
+}
