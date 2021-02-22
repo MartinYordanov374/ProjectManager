@@ -8,7 +8,7 @@ const reducer=(state={projects:[{}]}, action)=>{
             }
             case 'removeProject':
                 let curProjects = [...state.projects];
-                let index = curProjects.findIndex(product=>action.id===product.id)
+                let index = curProjects.findIndex(product=>product.id===action.id)
                 if(index>-1){
                    curProjects.splice(index,1)
                 }      

@@ -14,11 +14,14 @@ class Projects extends Component{
     }
     const deleteProject=(project)=>{
         store.dispatch({type: 'removeProject', id: project.id})
+        window.location.reload()
     }
     return (
         <div className='projectsPageContainer'>
             <NavbarComponents/>
+            {projects.length > 0 ? 
             <div className='projectsListContainer col-sm-12 col-md-12 col-lg-12'>
+                
                {projects.map(project=>
                <div className='projectContainer'>
                     <BsFillFolderFill className='projectIcon' size={100}/>
@@ -30,7 +33,13 @@ class Projects extends Component{
                 </div>)}
                
                 
+            </div> 
+            :
+            <div className='projectsListContainer col-sm-12 col-md-12 col-lg-12'>
+                    <h1 className='noProjectsAlert'>You do not have any projects at the moment</h1>
+
             </div>
+}
         </div>
     )
 }
