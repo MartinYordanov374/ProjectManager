@@ -20,4 +20,10 @@
   margin-left: 25%;
   margin-top: 2%;
 }
+
+.formContainer .formHolder .alertWrongData {
+  width: 50%;
+  margin-left: 25%;
+  display: none;
+}
 /*# sourceMappingURL=addProjectStyling.css.map */
