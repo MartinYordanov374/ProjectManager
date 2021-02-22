@@ -11,7 +11,7 @@ import $ from 'jquery'
 import {uuid} from 'uuidv4'
 function AddProject() {
     const addProject=()=>{
-        store.dispatch({type: 'addProject', projectName:$('.addProjectNameForm').val(), projectDeadLine:$('.addProjectDeadlineForm').val(), id: uuid() })
+        store.dispatch({type: 'addProject', projectName:$('.addProjectNameForm').val(), projectDeadLine:$('.addProjectDeadlineForm').val(), id: uuid(), isFinished: false})
     }
     return (
         <div className='formContainer'>

@@ -34,6 +34,15 @@
   color: lime;
 }
 
+.projectsPageContainer .projectsListContainer .projectContainer .projectFinishedIconDisabled {
+  float: left;
+  color: lime;
+}
+
+.projectsPageContainer .projectsListContainer .projectContainer .projectFinishedIconDisabled:hover {
+  color: #40ff00;
+}
+
 .projectsPageContainer .projectsListContainer .noProjectsAlert {
   color: black;
   margin-top: 20%;
