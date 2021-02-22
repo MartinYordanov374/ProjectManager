@@ -10,19 +10,22 @@ import {connect} from 'react-redux'
 import $ from 'jquery'
 import {uuid} from 'uuidv4'
 function AddProject() {
-    const addProject=()=>{
+    
+    const addProject=(project)=>{
         if($('.addProjectNameForm').val().length>0 && $('.addProjectDeadlineForm').val().length>0 ){
-            store.dispatch({type: 'addProject', projectName:$('.addProjectNameForm').val(), projectDeadLine:$('.addProjectDeadlineForm').val(), id: uuid(), isFinished: false})
-            window.location.href='/projects'
+             store.dispatch({type: 'addProject', projectName:$('.addProjectNameForm').val(), projectDeadLine:$('.addProjectDeadlineForm').val(), id: uuid(), isFinished: false})
+             window.location.href='/projects'
         }
         else{
-            $('.alertWrongData').fadeIn()
+             $('.alertWrongData').fadeIn()
         }
     }
     const hideAlert=()=>{
         $('.alertWrongData').fadeOut()
 
     }
+
+
     return (
         <div className='formContainer'>
             <Navbar/>

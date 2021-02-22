@@ -9,6 +9,7 @@ import {connect} from 'react-redux'
 class Projects extends Component{
     render(){
     const {projects} = this.props;
+    
     const markProjectAsFinished=(project)=>{
         store.dispatch({type: 'finishProject', id: project.id, isFinished: false})
         window.location.reload()
