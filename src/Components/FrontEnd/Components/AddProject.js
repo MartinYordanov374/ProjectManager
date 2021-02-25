@@ -9,11 +9,18 @@ import {store} from '/Asiat Yliopistolle/Project Manager/projectmanager/src/Comp
 import {connect} from 'react-redux'
 import $ from 'jquery'
 import {uuid} from 'uuidv4'
+import Axios from 'axios'
 function AddProject() {
     
     const addProject=(project)=>{
         if($('.addProjectNameForm').val().length>0 && $('.addProjectDeadlineForm').val().length>0 ){
              store.dispatch({type: 'addProject', projectName:$('.addProjectNameForm').val(), projectDeadLine:$('.addProjectDeadlineForm').val(), id: uuid(), isFinished: false})
+             Axios.post('http://localhost:3307/add', {
+                projectName: $('.addProjectNameForm').val(),
+                projectDue:$('.addProjectDeadlineForm').val()
+             }).then((response)=>{
+                 console.log(response)
+             })
              window.location.href='/projects'
         }
         else{
