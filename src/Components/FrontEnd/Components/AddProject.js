@@ -17,7 +17,7 @@ function AddProject() {
              store.dispatch({type: 'addProject', projectName:$('.addProjectNameForm').val(), projectDeadLine:$('.addProjectDeadlineForm').val(), id: uuid(), isFinished: false})
              Axios.post('http://localhost:3307/add', {
                 projectName: $('.addProjectNameForm').val(),
-                projectDue:$('.addProjectDeadlineForm').val()
+                projectDue:$('.addProjectDeadlineForm').val(),
              }).then((response)=>{
                  console.log(response)
              })

@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {BsFillFolderFill, BsTrash, BsCheckBox, BsCheckCircle} from 'react-icons/bs'
 import {store} from '/Asiat Yliopistolle/Project Manager/projectmanager/src/Components/BackEnd/store'
 import {connect} from 'react-redux'
+import Axios from 'axios'
 class Projects extends Component{
     render(){
     const {projects} = this.props;
@@ -16,6 +17,11 @@ class Projects extends Component{
     }
     const deleteProject=(project)=>{
         store.dispatch({type: 'removeProject', id: project.id})
+        Axios.post('http://localhost:3307/delete',{
+            projectName: project.projectName
+        }).then((response)=>{
+            console.log(response)
+        })
         window.location.reload()
     }
     return (

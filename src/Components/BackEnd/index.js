@@ -13,15 +13,21 @@ db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: 'password',
-    database: 'projects'
+    database: 'database'
 })
 app.post('/add',(req,res)=>{
     const projectName = req.body.projectName;
     const projectDue = req.body.projectDue;
-    db.query('INSERT INTO savedprojects (name, Due) VALUES (?,?)', [projectName, projectDue], (err,result)=>{
+   db.query('INSERT INTO savedprojects (name, Due) VALUES (?,?)', [projectName, projectDue], (err,result)=>{
         if(result.length>0){
             console.log('successful query')
         }
+    })
+})
+app.post('/delete',(req,res)=>{
+    const name = req.body.projectName;
+    console.log(name)
+    db.query('DELETE FROM savedprojects WHERE name=?', name, (err,result)=>{
     })
 })
 
