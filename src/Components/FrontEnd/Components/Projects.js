@@ -25,7 +25,12 @@ class Projects extends Component{
     const {projects} = this.props;
     
     const markProjectAsFinished=(project)=>{
-        store.dispatch({type: 'finishProject', id: project.id, isFinished: 1})
+        store.dispatch({type: 'finishProject', id: project.id, isFinished: 0})
+        Axios.post('http://localhost:3307/finishProject',{
+            projectID: project.id
+        }).then((response)=>{
+            console.log(response)
+        })
         window.location.reload()
     }
     const deleteProject=(project)=>{

@@ -43,7 +43,17 @@ app.post('/getProjects',(req,res)=>{
         
     })
 })
-
+app.post('/finishProject',(req,res)=>{
+    const projectID = req.body.projectID;
+    db.query('UPDATE savedprojects SET isFinished = 0 WHERE id = ?', projectID,(err,result)=>{
+        if(err){
+            console.log(err)
+        }
+        else{
+            console.log('successful query')
+        }
+    })
+})
 app.listen(3307, ()=>{
     console.log('server started on PORT 3307')
 })
