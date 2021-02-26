@@ -13,7 +13,7 @@ db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: 'password',
-    database: 'database'
+    database: 'projects'
 })
 app.post('/add',(req,res)=>{
     const projectName = req.body.projectName;
@@ -25,9 +25,21 @@ app.post('/add',(req,res)=>{
     })
 })
 app.post('/delete',(req,res)=>{
-    const name = req.body.projectName;
+    const name = req.body.projectID;
     console.log(name)
-    db.query('DELETE FROM savedprojects WHERE name=?', name, (err,result)=>{
+    db.query('DELETE FROM savedprojects WHERE id=?', name, (err,result)=>{
+    })
+})
+app.post('/getProjects',(req,res)=>{
+    db.query('SELECT * FROM savedprojects',(err, result)=>{
+        if(err){
+            console.log(`An error occurred while querying the database - ${err}`)
+            
+        }
+        else{
+            res.send(result)
+        }
+        
     })
 })
 
