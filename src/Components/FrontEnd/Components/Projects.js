@@ -25,7 +25,7 @@ class Projects extends Component{
     const {projects} = this.props;
     
     const markProjectAsFinished=(project)=>{
-        store.dispatch({type: 'finishProject', id: project.id, isFinished: false})
+        store.dispatch({type: 'finishProject', id: project.id, isFinished: 1})
         window.location.reload()
     }
     const deleteProject=(project)=>{
@@ -48,7 +48,7 @@ class Projects extends Component{
                 <div className='projectContainer'>
                         <BsFillFolderFill className='projectIcon' size={100}/>
                         <BsTrash className='deleteProjectIcon' size={30} onClick={()=>deleteProject(project)}/>    
-                        {project.isFinished==false? 
+                        {project.isFinished==1? 
                         <BsCheckBox className='projectFinishedIcon' size={30} onClick={()=>markProjectAsFinished(project)}/>
                         :
                         <BsCheckCircle className='projectFinishedIconDisabled' size={30}/>}

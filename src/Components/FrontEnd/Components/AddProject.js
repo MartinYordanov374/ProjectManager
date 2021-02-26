@@ -14,10 +14,11 @@ function AddProject() {
     
     const addProject=(project)=>{
         if($('.addProjectNameForm').val().length>0 && $('.addProjectDeadlineForm').val().length>0 ){
-             store.dispatch({type: 'addProject', projectName:$('.addProjectNameForm').val(), projectDeadLine:$('.addProjectDeadlineForm').val(), id: uuid(), isFinished: false})
+             store.dispatch({type: 'addProject', projectName:$('.addProjectNameForm').val(), projectDeadLine:$('.addProjectDeadlineForm').val(), id: uuid(), isFinished: 1})
              Axios.post('http://localhost:3307/add', {
                 projectName: $('.addProjectNameForm').val(),
                 projectDue:$('.addProjectDeadlineForm').val(),
+                projectStatus: 1,
              }).then((response)=>{
                  console.log(response)
              })

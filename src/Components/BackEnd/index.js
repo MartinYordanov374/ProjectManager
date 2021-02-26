@@ -18,7 +18,8 @@ db = mysql.createConnection({
 app.post('/add',(req,res)=>{
     const projectName = req.body.projectName;
     const projectDue = req.body.projectDue;
-   db.query('INSERT INTO savedprojects (name, Due) VALUES (?,?)', [projectName, projectDue], (err,result)=>{
+    const projectStatus = req.body.projectStatus;
+   db.query('INSERT INTO savedprojects (name, Due, isFinished) VALUES (?,?,?)', [projectName, projectDue, projectStatus], (err,result)=>{
         if(result.length>0){
             console.log('successful query')
         }
